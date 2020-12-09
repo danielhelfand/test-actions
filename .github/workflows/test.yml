@@ -1,0 +1,13 @@
+name: Build and Test
+
+on:
+  push:
+  pull_request:
+    types: [opened]
+
+jobs:
+  checkout:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code into the Go module directory
+      uses: actions/checkout@v2
