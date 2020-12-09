@@ -3,11 +3,11 @@ name: Build and Test
 on:
   push:
   pull_request:
-    types: [opened]
+    types: [opened, reopened]
 
 jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-    - name: Check out code into the Go module directory
+    - name: Checkout
       uses: actions/checkout@v2
