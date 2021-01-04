@@ -15,3 +15,8 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           ignore-comments: true
           default-labels: '["carvel-triage"]'
+    
+    - name: e2e
+      run: |
+        echo "${{ github.event.issue.closed_at}}"
+        echo "${{ github.event.payload.created_at}}"
