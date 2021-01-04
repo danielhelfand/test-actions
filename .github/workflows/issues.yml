@@ -16,7 +16,7 @@ jobs:
           ignore-comments: true
           default-labels: '["carvel-triage"]'
     
-    - name: e2e
-      run: |
-        echo "${{ github.event.issue.closed_at}}"
-        echo "${{ github.event.payload.created_at}}"
+      - name: e2e
+        run: |
+          echo "${{ github.event.issue.closed_at}}"
+          echo "${{ github.event.payload.created_at}}"
