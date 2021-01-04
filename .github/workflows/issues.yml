@@ -19,4 +19,4 @@ jobs:
       - name: e2e
         run: |
           echo "Closed: ${{ github.event.issue.closed_at}}"
-          echo "Created: ${{ github.event.payload.created_at}}"
+          echo "Created: ${{ github.event.comment.created_at}}"
